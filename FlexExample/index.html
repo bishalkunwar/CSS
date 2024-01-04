@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Learning</title>
+
+    <style>
+        .flex-container{
+            background-color: black;
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+        }
+
+        .flex-container div{
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 10px;
+            margin-right: 50px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .flex-container-1{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex: 70%;
+            margin-right: 50px;
+        }
+
+        .flex-container-1 div{
+            background-color: aqua;
+            /* margin: 5px;
+            padding: 5px; */
+        }
+
+        .flex-container-1 div:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            border: 2px solid green;
+            transition: transform 0.3s ease-in;
+            flex-basis: 80px;
+
+        }
+
+        .flex-container-2{
+            flex: 30%;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex Box</h2>
+
+    <div class="flex-container">
+        <div class="flex-container-1">
+            <div>row 1</div>
+            <div>row 2</div>
+            <div>row 3</div>
+            <div>row 4</div>
+            <div>row 5</div>
+            <div>row 6</div>
+            <div>row 3</div>
+            <div>row 4</div>
+            <div>row 5</div>
+            <div>row 6</div>
+        </div>
+        <div class="flex-container-2">
+            <div>row seperate</div>
+        </div>
+    </div>
+
+    <!-- <div class="flex-container-col">
+        <div>col1</div>
+        <div>col 2</div>
+        <div>col 3</div>
+    </div> -->
+</body>
+</html>
