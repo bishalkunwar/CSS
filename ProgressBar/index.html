@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Progress Bar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                background-color: aliceblue;
+                font-family: 'Muli', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+                margin: 0;
+            }
+
+            .container{
+                text-align: center;
+            }
+
+            .progress-container{
+                content: '';
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                margin-bottom: 30px;
+                max-width: 100%;
+                width: 350px;
+            }
+
+            .progress-container::before {
+                content: '';
+                background-color: #999;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                height: 4px;
+                width: 100%;
+                z-index: -1;
+                transition: 0.4s ease;
+            }
+
+            .progress{
+                background-color: #999;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                height: 4px;
+                width: 50%;
+                z-index: -1;
+                transition: 0.4s ease;
+            }
+
+            .circle{
+                background-color: #fff;
+                color: #999;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 3px solid #e0e0e0;
+                transition: 0.4s ease;
+            }
+
+            .circle.active{
+                border-color: #3498db;
+            }
+
+            .btn{
+                background-color: blue;
+                color: #fff;
+                border: 0;
+                border-radius: 6px;
+                cursor: pointer;
+                font-family: inherit;
+                padding: 8px 30px;
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .btn:active{
+                transform: scale(0.98);
+            }
+
+            .btn:focus{
+                outline: 0;
+            }
+
+            .btn:disabled{
+                background-color:#fff;
+                color: black;
+                cursor: not-allowed;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="circle active">1</div>
+                <div class="circle">2</div>
+                <div class="circle">3</div>
+                <div class="circle">4</div>
+            </div>
+
+            <button class="btn" id="prev" disabled>Prev</button>
+            <button class="btn" id="next">Next</button>
+        </div>
+
+        <script>
+
+        </script>
+    </body>
+</html>
