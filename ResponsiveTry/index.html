@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: green;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        /* Main flex container */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+/* Flex container for 1 and 2 */
+.flex-container-1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 0; /* Remove the margin-bottom */
+}
+
+        /* Flex items for 1 and 2 */
+        .flex-container-1>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            width: 48%; /* Adjust for spacing */
+        }
+
+        /* Flex mini container */
+/* Flex mini container */
+.flex-mini-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Set align-items to stretch */
+    background-color: gray;
+    padding: 10px;
+    width: 100%;
+}
+
+
+        /* Flex container for 3 */
+        .flex-container-2 {
+            background-color: gray;
+            padding: 10px;
+            width: 48%;
+        }
+
+        /* Flex item for 3 */
+        .flex-container-2>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        /* Flex container for 4, 5, 6, 7 */
+        .flex-container-3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: gray;
+            padding: 10px;
+            width: 48%;
+        }
+
+        /* Flex items for 4, 5, 6, 7 */
+        .flex-container-3>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            width: 48%; /* Adjust for spacing */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GeeksforGeeks</h1>
+    <div class="flex-container">
+        <div class="flex-container-1">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+        </div>
+
+        <div class="flex-mini-container">
+            <div class="flex-container-2">
+                <div class="item3">3</div>
+            </div>
+            <div class="flex-container-3">
+                <div class="item4">4</div>
+                <div class="item5">5</div>
+                <div class="item6">6</div>
+                <div class="item7">7</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
