@@ -7,10 +7,84 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                font-family: 'Muli', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+                margin: 0;
+            }
+
+            .container{
+                display: flex;
+                width: 90vw;
+                margin: 10px;
+            }
+
+            .panel{
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+                height: 80vh;
+                border-radius: 50px;
+                color: #fff;
+                cursor: pointer;
+                flex: 0.5;
+                margin: 10px;
+                position: relative;
+                transition: flex 0.7s ease-in;
+            }
+
+            .panel.active{
+                flex: 0.8;
+            }
+
+            .panel h3{
+                font-size: 24px;
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                margin: 0;
+                opacity: 0;
+            }
+
+            .panel.active h3{
+                opacity: 1;
+            }
+
+            @media screen and (max-width: 480px){
+                .container{
+                    width: 100vw;
+                }
+
+                .panel:nth-of-type(4), 
+                .panel:nth-of-type(5){
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width: 480px) and  (max-width: 720px){
+                .container{
+                    width: 100vw;
+                }
+
+                .panel:nth-of-type(5){
+                    display: none;
+                }
+            }
+        </style>
     </head>
     <body> 
         <div class="container">
-            <div class="panel active" style="background-image: url('https://plus.unsplash.com/premium_photo-1671599010192-23b6bfd6fb6e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <div class="panel active" style="background-image: url('https://images.unsplash.com/photo-1704426882813-8acfff020487?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
                 <h3>Enough?</h3>
             </div>
             <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1704044843056-f58d8c147f88?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
