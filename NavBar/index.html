@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Awesome Rotating Navbar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+            
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                font-family: 'Lato', sans-serif;
+                overflow-x: hidden;
+                margin: 0;
+                background-color: #333;
+                color: #222;
+            }
+
+            .container{
+                background-color: #fafafa;
+                width: 100vw;
+                min-height: 100vh;
+                padding: 50px;
+                transform-origin: top-left;
+                transition: transform 0.5s linear;
+            }
+
+            .container.show-nav{
+                transform: rotate(-20deg);
+            }
+
+            .circle-container{
+                position: fixed;
+                top: -100px;
+                left: -100px;    
+            }
+
+            .circle{
+                background-color: #ff7979;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                position: relative;
+                transition: transform 0.5s linear;
+            }
+
+            .circle button{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100px;
+                background: transparent;
+                border: 0;
+                font-size: 26px;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .circle button:focus{
+                outline: none;
+            }
+
+            .circle button#open{
+                left: 60%;
+            }
+
+            .circle button#close{
+                top: 60%;
+                transform: rotate(90deg);
+                transform-origin: top-left;
+            }
+
+            .content img{
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="circle-container">
+                <div class="circle">
+                    <button id="close">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </button>
+                    <button id="open">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content">
+                <h1>Amazing Articles</h1>
+                <small>Bishal Kunwar</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique doloremque velit molestiae. Molestiae tenetur aliquam consequuntur sapiente. Reiciendis, deserunt. Dicta adipisci, vero quidem non laborum natus earum doloribus incidunt at saepe! Molestias fugiat laboriosam tenetur fugit saepe sunt deserunt! Necessitatibus qui voluptas reprehenderit omnis sint id ut obcaecati odit, fugiat quod perferendis. Autem molestias possimus, nulla quas saepe cumque adipisci corrupti sequi fugiat error iste nihil, pariatur expedita iusto? Obcaecati quae molestias minus at rem cupiditate beatae sapiente excepturi, ex debitis accusamus mollitia animi nobis, qui perspiciatis voluptatum officiis ipsam asperiores laboriosam illo earum praesentium! Repellendus aut deserunt dicta quas!</p>
+                <h3>My Dog</h3>
+                <img src="https://media.istockphoto.com/id/1460537153/photo/a-golden-retriever-running-with-her-ball-in-yard-by-a-tree-5-year-old.jpg?s=1024x1024&w=is&k=20&c=edMHVhcYWzssMwhmZt7HRO2OmF064uUldrH0pEcTJHc=" alt="My Dog">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, laborum rerum nam molestiae aspernatur eligendi inventore deleniti commodi temporibus sint exercitationem, optio laudantium possimus illum facilis quo, natus sunt vero quis? Porro quos officiis quas accusantium neque expedita autem quibusdam eius accusamus voluptates quasi quia voluptatem adipisci perferendis, quo magnam blanditiis aliquid dignissimos sapiente eum nostrum consectetur iure doloremque? Maiores reiciendis laudantium fugit officiis soluta labore, dolor praesentium, illum consectetur facere minima dolores earum repellat adipisci temporibus similique. Et, qui animi id maxime earum asperiores iure corporis totam aperiam quasi. Eveniet maxime, ab fugiat voluptas ratione consectetur? Nihil, quam rerum.</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><i class="fa-solid fa-house"></i></li>
+                <li><i class="fa-solid fa-user-large"></i></li>
+                <li><i class="fa-regular fa-address-book"></i></li>
+            </ul>
+        </nav>
+
+        <script>
+
+        </script>
+    </body>
+</html>
